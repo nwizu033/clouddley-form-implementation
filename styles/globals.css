@@ -15,12 +15,264 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+.blue{
+  color: rgb(6, 146, 211);
+}
+
+.blue:hover{
+  cursor: pointer;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+body .container{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+.container .static-part{
+width: 50%;
+height: 100vh;
+display: block;
+position: sticky;
+top: 0;
+}
+.static-part .sticky{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(226, 236, 240, 0.913);
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+}
+.static-part .logo-part{
+  margin: 2rem 0;
+  padding: 1rem 5rem;
+}
+
+.static-part .image-part{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.static-part .text-part{
+  padding: 1rem 5rem;
+  font-size: 1.5rem;
+  color: rgb(6, 146, 211);
+}
+
+
+/* form part */
+.container .form-part{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-part .form-container{
+  width: 80%;
+}
+
+.form-container input[type=text],input[type=password]{
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  border: 0.5px solid rgb(134, 133, 133);
+  font-size: 1.1rem;
+
+}
+
+.form-container h2{
+  color: rgb(11, 154, 201);
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.form-container h2:hover{
+  cursor:auto;
+}
+
+.query{
+  margin-left:52%;
+  padding: 2rem 0;
+}
+
+.email-part{
+  margin: 2rem 0;
+}
+.remember{
+  display: flex;
+  justify-content: space-between;
+}
+.remember div{
+  display: flex;
+}
+.remember div p{
+  margin-left: 10px;
+}
+
+button{
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 5px;
+  margin: 2rem 0;
+  background-color: rgb(6, 146, 211);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+}
+.line-part{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.line-part div{
+  border-top: 0.2px solid rgb(134, 133, 133);
+  width: 35%;
+}
+
+.icons-part{
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.icons-part div{
+  width: 50%;
+  border: 0.2px solid rgb(134, 133, 133);
+  border-radius: 5px;
+  padding: 0.1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 1.05rem;
+  color: rgba(0, 0, 0,0.7);
+}
+.icons-part div img{
+  width: 15%;
+  height: 35px;
+}
+
+.options{
+  margin-top: 1rem;
+}
+.options div{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.options span{
+  text-decoration: underline;
+}
+
+.forget-part{
+  margin-top: 40%;
+  font-size: 1.5rem;
+}
+
+.forget-details{
+  margin-top: 3rem;
+}
+.have-password{
+  margin-left: 76%;
+}
+.forget-button{
+  margin-bottom: 7rem;
+}
+
+.password-eye{
+  display: flex;
+  align-items: center;
+}
+
+.password-eye input{
+  width: 100%;
+}
+
+.eye{
+  margin-left: -40px;
+}
+.eye:hover{
+  cursor: pointer;
+}
+
+
+
+
+/* media queries */
+@media screen  and (max-width: 700px){
+
+.container .static-part{
+  display: none;
+
+}
+
+.container .form-part{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(226, 236, 240, 0.913);
+
+}
+
+.form-part .form-container{
+  width: 90%;
+  background-color: white;
+  margin-top: 15%;
+  max-height: 80%;
+  margin-bottom: 10%;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.form-part .clouddley-logo{
+  height: 50px;
+  width: 90%;
+  background-image: url('https://app.clouddley.com/_next/image?url=%2Fimages%2Fauth-logo.png&w=256&q=75');
+  background-repeat: no-repeat;
+  margin-top: 10%;
+
+}
+.query{
+  margin-left:0;
+  padding: 2rem 0;
+}
+
+.icons-part {
+  flex-direction: column;
+
+}
+
+.icons-part div{
+  width: 100%;
+}
+
+.icons-part div img{
+  width: 10%;
+}
+
+.line-part div{
+  border-top: 0.2px solid rgb(134, 133, 133);
+  width: 30%;
+}
+.have-password{
+  margin-left: 70%;
+}
+
+
+}
+
+
+@media screen  and (max-width: 400px){
+  .have-password{
+    margin-left: 58%;
   }
 }
